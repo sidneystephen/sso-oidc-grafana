@@ -6,8 +6,6 @@ I'm still learning this, so I explain things the way I came to understand them w
 
 **Short step-by-step version:** [RUNBOOK.md](RUNBOOK.md)
 
-> 🔒 **Note:** I removed or blurred everything sensitive: the client ID, the client secret, server addresses, MFA QR codes, and user emails. Placeholders like `http://server` and `<grafana-url>` stand in for the real addresses.
-
 ---
 
 ## Some terms I had to learn first
@@ -46,8 +44,6 @@ The **provider** holds the technical login settings (secrets, addresses, scopes)
 3. I set the **Client Type** to **Confidential**, because Grafana runs on a server and can keep a secret safe. Authentik created a Client ID and Client Secret for me (blurred here).
 
    ![Client type (Client ID blurred)](screenshots/03-provider-confidential-client.png)
-
-   > 💡 **Lesson learned:** In my first draft of these notes I pasted the client secret right into the document. That's a bad habit, because anyone who sees it could pretend to be my Grafana app. Secrets should only go where they're needed, which here is Grafana's settings.
 
 4. I added the **Redirect URI**. This is where Authentik sends users back to Grafana: `<grafana-url>/login/generic_oauth`
 
