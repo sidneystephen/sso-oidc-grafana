@@ -1,0 +1,4 @@
+.env
+*.secret
+*.docx
+.DS_Store
